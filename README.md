@@ -50,7 +50,7 @@ UpWatch is a self-hosted status page and uptime monitoring solution built with C
 - **PHP 8.3+** (8.1+ supported, 8.3+ recommended)
 - **MySQL 8.0+** or **MariaDB 10.6+**
 - **Composer 2.6+**
-- **Node.js 22+ & npm** (for asset building)
+- **Node.js 20+ & npm** (for asset building)
 - **Git** (for version control)
 
 ### Installation
@@ -249,6 +249,8 @@ To:
    npm run build         # Build optimized CSS
    ```
 
+> **Note**: The `package-lock.json` file is now included in the repository to ensure consistent builds across environments and fix GitHub Actions deployment.
+
 2. **Update view files** to use compiled CSS (as shown above)
 
 3. **Deploy** the built `output.css` along with your code
@@ -280,13 +282,13 @@ npm run build  # Production build - minified and optimized
 ```
 
 **Dependencies:**
-- `tailwindcss` ^3.5.7 - Core CSS framework
-- `@tailwindcss/forms` ^0.5.9 - Form styling plugin
-- `autoprefixer` ^10.4.20 - Browser compatibility
-- `postcss` ^8.4.49 - CSS processing
-- `alpinejs` ^3.15.0 - Lightweight JavaScript framework  
-- `htmx.org` ^1.9.12 - Dynamic HTML interactions
-- `chart.js` ^4.5.0 - Charts and graphs
+- `tailwindcss` ^3.4.0 - Core CSS framework
+- `@tailwindcss/forms` ^0.5.7 - Form styling plugin
+- `autoprefixer` ^10.4.16 - Browser compatibility
+- `postcss` ^8.4.32 - CSS processing
+- `alpinejs` ^3.13.3 - Lightweight JavaScript framework  
+- `htmx.org` ^1.9.10 - Dynamic HTML interactions
+- `chart.js` ^4.4.1 - Charts and graphs
 
 #### Why Not CDN in Production?
 

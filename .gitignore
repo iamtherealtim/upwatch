@@ -27,7 +27,9 @@ vendor/
 # Node
 node_modules/
 
-# Yarn (if using Yarn instead of npm)
+# Package lock files - KEEP package-lock.json IN GIT!
+# It ensures consistent npm dependency versions across environments
+# Only ignore yarn.lock if using npm
 yarn.lock
 
 # IDE files
