@@ -1,2 +1,1 @@
-# upwatch
-pWatch is a self-hosted status page and uptime monitoring solution built with CodeIgniter 4, HTMX, Alpine.js, and Tailwind CSS. Perfect for teams who want full control over their status page infrastructure.
+UpWatch is a self-hosted status page and uptime monitoring solution built with CodeIgniter 4, HTMX, Alpine.js, and Tailwind CSS. Perfect for teams who want full control over their status page infrastructure.
