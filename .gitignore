@@ -1,18 +1,68 @@
-*/config/development
-*/logs/log-*.php
-!*/logs/index.html
-*/cache/*
-!system/cache/*
-!*/cache/index.html
-!*/cache/.htaccess
+# Environment files - NEVER commit these!
+.env
+.env.production
+.env.local
+.env.*.local
 
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+# Writable directories
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+!writable/index.html
+!writable/cache/index.html
+!writable/debugbar/index.html
+!writable/logs/index.html
+!writable/session/index.html
+!writable/uploads/index.html
 
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-/vendor/
+# Composer
+vendor/
+
+# Composer lock file - KEEP THIS IN GIT!
+# It ensures everyone uses the same dependency versions
+# Only ignore it if you're building a library (not an application)
+
+# Node
+node_modules/
+
+# Yarn (if using Yarn instead of npm)
+yarn.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.buildpath
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Debug and temporary files
+writable/logs/monitor_debug.txt
+*.log
+*.tmp
+
+# Build files
+public/build/
+dist/
+
+# Tailwind CSS - Generated file (built during deployment)
+# DO NOT commit compiled CSS - it's a build artifact
+public/assets/css/output.css
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# PHP CS Fixer
+.php_cs.cache
+.php-cs-fixer.cache

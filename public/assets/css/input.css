@@ -1,0 +1,63 @@
+/**
+ * UpWatch Tailwind CSS Input File
+ * 
+ * This is the source file for Tailwind CSS compilation.
+ * DO NOT edit output.css directly - it will be overwritten!
+ * 
+ * Build commands:
+ *   npm run dev   - Watch mode for development
+ *   npm run build - Minified build for production
+ * 
+ * This file generates: public/assets/css/output.css
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom UpWatch Styles */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-upwatch-500 text-white hover:bg-upwatch-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+  
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .status-operational {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-degraded {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-partial {
+    @apply bg-orange-100 text-orange-800;
+  }
+  
+  .status-major {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .status-maintenance {
+    @apply bg-blue-100 text-blue-800;
+  }
+}

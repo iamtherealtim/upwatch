@@ -1,0 +1,42 @@
+name: Build Assets
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v5
+      with:
+        node-version: '22'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build Tailwind CSS
+      run: npm run build
+      
+    - name: Check that output.css was generated
+      run: |
+        if [ ! -f public/assets/css/output.css ]; then
+          echo "Error: output.css was not generated!"
+          exit 1
+        fi
+        echo "✓ output.css generated successfully"
+        
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: css-build
+        path: public/assets/css/output.css
+        retention-days: 30
