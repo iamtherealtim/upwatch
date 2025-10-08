@@ -1,6 +1,7 @@
 # UpWatch 🔍
 
-![UpWatch Logo](https://via.placeholder.com/150x50/3b82f6/ffffff?text=UpWatch)
+
+<img width="962" height="429" alt="upwatch-logo" src="https://github.com/user-attachments/assets/af821cdc-1158-4de4-828d-077377a28566" />
 
 **Open-source uptime monitoring & status pages made simple**
 
