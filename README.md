@@ -657,8 +657,7 @@ Before deploying to production:
 2. Enable HTTPS (required for secure cookies)
 3. Generate encryption key: `php spark key:generate`
 4. Change default admin password immediately
-5. Review `SECURITY_AUDIT_REPORT.md` and `SECURITY_FIXES_COMPLETE.md`
-6. Never commit `.env` file to version control
+5. Never commit `.env` file to version control
 
 ## 🚀 Getting Started (Quick)
 
